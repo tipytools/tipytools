@@ -72,10 +72,10 @@ class Tipytools:
                 if key.endswith("/"):
                     os.makedirs(key)
                     for _dir, content in value.items():
-                        with open(f"{key}/{_dir}", "w") as file:
+                        with open(f"{key}/{_dir}", "w", encoding="utf-8") as file:
                             file.write(content)
                 else:
-                    with open(key, "w") as new_file:
+                    with open(key, "w", encoding="utf-8") as new_file:
                         if new_file.name == "README.md":
                             new_file.write(tmp.README)
                         elif new_file.name == "setup.py":
