@@ -84,7 +84,7 @@ class Log:
             print('\\n\\033[34mℹ', param, '\\033[0m')  # Blue color for info
             ...
         elif type == 'warning':
-            print('\\n\\033[33m⚠', param, '\033[0m')  # Yellow color for warning
+            print('\\n\\033[33m⚠', param, '\\033[0m')  # Yellow color for warning
             ...
         elif type == 'error':
             exit('\\n\\033[31m❌', param, '\\033[0m')  # Red color for error
