@@ -99,19 +99,15 @@ class Log:
 
 PYPROJECT_TOML =\
 """[build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-[tool.poetry]
+[project]
 name = "/toolname/"
-version = "1.0.0"
-authors = [
-    {name = "Your Name", email = "your_email@example.com"},
-]
-description = "synopsis of your tool"
+authors = [{ name = "Your Name", email = "youremail@example.com" }]
+description = "description of your tool"
 readme = "README.md"
-homepage = "https://github.com/github_name/toolname"
-repository = "https://github.com/github_name/toolname"
+requires-python = ">=3.7"
 keywords = [
     "command-line interface",
     "development tools",
@@ -124,8 +120,14 @@ keywords = [
     "software development",
     "command-line applications"
 ]
+license = { text = "BSD-3-Clause" }
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Operating System :: OS Independent',
+]
+dependencies = ["fire"]
+dynamic = ["version"]
 
-[tool.poetry.dependencies]
-python = "^3.6"
-fire = "*"
+[project.scripts]
+my-script = "my_package.module:main"
 """

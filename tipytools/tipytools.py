@@ -77,12 +77,13 @@ class Tipytools:
                             file.write(content)
                 else:
                     with open(key, "w", encoding="utf-8") as new_file:
-                        if new_file.name == "README.md":
-                            new_file.write(tmp.README)
-                        elif new_file.name == "setup":
-                            new_file.write(tmp.SETUP)
-                        elif new_file.name == "pyproject.toml":
-                            new_file.write(tmp.PYPROJECT_TOML)
+                        new_file.write(value)
+                        # if new_file.name == "README.md":
+                        #     new_file.write(content)
+                        # elif new_file.name == "setup":
+                        #     new_file.write(content)
+                        # elif new_file.name == "pyproject.toml":
+                        #     new_file.write(content)
 
 
 def main():
