@@ -96,3 +96,36 @@ class Log:
             exit("invalid log type: [ {} ]".format(type))
             ...
 """
+
+PYPROJECT_TOML =\
+"""[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "/toolname/"
+version = "1.0.0"
+authors = [
+    {name = "Your Name", email = "your_email@example.com"},
+]
+description = "synopsis of your tool"
+readme = "README.md"
+homepage = "https://github.com/github_name/toolname"
+repository = "https://github.com/github_name/toolname"
+keywords = [
+    "command-line interface",
+    "development tools",
+    "Python library",
+    "CLI utilities",
+    "project scaffolding",
+    "automation",
+    "code generation",
+    "tooling",
+    "software development",
+    "command-line applications"
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+fire = "*"
+"""

@@ -57,14 +57,15 @@ class Tipytools:
         TOOL_NAME = tool_name
 
         structure = {
-            "package_test/": {"test.py": ""},
+            "tool_test/": {"placeholder": ""},
             f"{tool_name}/": {
                 "__init__.py": "",
                 f"{tool_name}.py": tmp.PACKAGE.replace('/toolname/', tool_name),
                 'logger.py': tmp.LOGGER
             },
             "README.md": tmp.README,
-            "setup.py": tmp.SETUP,
+            "setup": tmp.SETUP,
+            "pyproject.toml": tmp.PYPROJECT_TOML,
         }
 
         if not os.path.exists(tool_name):
