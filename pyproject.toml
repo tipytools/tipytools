@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "tipytools"
 authors = [{ name = "Mauly dotDev", email = "mauly.dev@gmail.com" }]
 description = "A tool for generating boilerplate for creating command-line tools"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.7"
 keywords = [
     "command-line interface",
