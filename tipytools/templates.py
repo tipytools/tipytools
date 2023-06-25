@@ -1,5 +1,10 @@
 PACKAGE = \
-    """import fire
+"""
+import os
+import sys
+import fire
+import subprocess
+from /toolname/.logger import Log
 
 def main():
     fire.Fire(Toolname)

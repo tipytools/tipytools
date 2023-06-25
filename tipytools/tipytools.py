@@ -60,7 +60,7 @@ class Tipytools:
             "package_test/": {"test.py": ""},
             f"{tool_name}/": {
                 "__init__.py": "",
-                f"{tool_name}.py": tmp.PACKAGE,
+                f"{tool_name}.py": tmp.PACKAGE.replace('/toolname/', tool_name),
                 'logger.py': tmp.LOGGER
             },
             "README.md": tmp.README,

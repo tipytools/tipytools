@@ -1,6 +1,6 @@
 # Tipytools
 
-Tipytools is a Python library that simplifies the development of command-line tools by providing a collection of command-line tool templates and utilities. It offers features such as project setup, template-based file generation, logging, and integration with the fire library for creating user-friendly command-line interfaces.
+ Tipytools is a Python library that simplifies the development of command-line tools by providing a collection of command-line tool templates and utilities. It offers features such as project setup, template-based file generation, logging, and integration with the fire library for creating user-friendly command-line interfaces.
 
 ## Features
 
@@ -11,7 +11,24 @@ Tipytools is a Python library that simplifies the development of command-line to
 - **Integration with fire library**: Tipytools integrates with the fire library to provide a user-friendly and intuitive command-line interface for your generated tools.
 - **Optional virtual environment**: If you want to set up the project without a virtual environment, you can use the `maketool` command to generate only the folder structure without creating a virtual environment.
 
-Installation:
+## Folder Structure
+
+The folder structure for Tipytools is as follows:
+
+```
+Tipytools/
+├── package_test/
+│ └── test.py
+├── [tool_name]/
+│ ├── init.py
+│ ├── [tool_name].py
+│ └── logger.py
+├── README.md
+└── setup.py
+```
+
+## Installation:
+
 You can install Tipytools directly from the GitHub repository:
 
 ```shell
@@ -22,9 +39,9 @@ pip install git+https://github.com/tipytools/tipytools.git
 
 1. Set up your project:
    - To create a virtual environment and generate the project structure, run the `setup` command and specify the tool name and optional virtual environment name.
-    - Example: `tipy setup tool=[toolname] [optional: env=[venvname]]`
+   - Example: `tipy setup tool=[toolname] [optional: env=[venvname]]`
    - To generate only the folder structure without a virtual environment, run the `maketool` command and specify the tool name.
-    - Example: `tipy maketool [toolname]`
+   - Example: `tipy maketool [toolname]`
 2. Implement your tool's logic within the generated files and customize as needed.
 3. Run your tool from the command line: Use the tool name followed by the desired command and arguments.
    - Example: `[toolname] [command] [arguments]`
