@@ -79,8 +79,10 @@ class Tipytools:
                     with open(key, "w", encoding="utf-8") as new_file:
                         if new_file.name == "README.md":
                             new_file.write(tmp.README)
-                        elif new_file.name == "setup.py":
+                        elif new_file.name == "setup":
                             new_file.write(tmp.SETUP)
+                        elif new_file.name == "pyproject.toml":
+                            new_file.write(tmp.PYPROJECT_TOML)
 
 
 def main():
