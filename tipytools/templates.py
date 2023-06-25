@@ -88,6 +88,6 @@ class Log:
             print('\n\033[32m✓', param, '\033[0m')  # Green color for success
             ...
         else:
-            exit("invalid log type: [ {\} ]".format(type))
+            exit("invalid log type: [ {''} ]".format(type))
             ...
 """
