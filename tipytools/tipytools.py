@@ -13,6 +13,21 @@ TOOL_NAME = ""
 
 class Tipytools:
     def setup(self, *kwargs):
+        """Set up a new project for a command-line tool.
+
+        Args:
+            tool_name (str): The name of the tool.
+            env (str, optional): The name of the virtual environment. If not provided,
+                a default environment name will be derived from the tool name.
+
+        Examples:
+            To set up a project for a tool named "mytool" with a virtual environment named "myenv", run:
+            $ tipy setup tool=mytool env=myenv
+
+            To set up a project for a tool named "mytool" without specifying a virtual environment, run:
+            $ tipy setup tool=mytool
+        """
+
         tool = ""
         env = ""
 
@@ -31,7 +46,15 @@ class Tipytools:
             self.init(env)
 
     def init(self, env):
-        # Log("Initializing project, please wait...")
+        """Initialize the project and activate the virtual environment.
+
+        Args:
+            env (str): The name of the virtual environment.
+
+        Examples:
+            To initialize the project with a virtual environment named "myenv", run:
+            $ tipy init myenv
+        """
         stdout = subprocess.run(["python", "-m", "venv", env])
 
         if stdout.returncode == 1:
@@ -53,6 +76,15 @@ class Tipytools:
         subprocess.run(["pip", "install", "fire"], shell=True)
 
     def maketool(self, tool_name):
+        """Generate the folder structure for a new tool.
+
+        Args:
+            tool_name (str): The name of the tool.
+
+        Examples:
+            To generate the folder structure for a tool named "mytool", run:
+            $ tipy maketool mytool
+        """
         global TOOL_NAME
         TOOL_NAME = tool_name
 
