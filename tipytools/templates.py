@@ -39,7 +39,7 @@ setup(
     description='short synopsis of your tool',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/your_username/tool_name',
+    url='https://github.com/tipytools/tipytools',
     py_modules=['tool_name.tool_name'], # example: ['tipytools.tipytools']
     packages=find_packages(),
     classifiers=[
