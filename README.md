@@ -1,4 +1,4 @@
-![](tipy.png)
+![Tipytools](tipy.png)
 
 # Tipytools
 

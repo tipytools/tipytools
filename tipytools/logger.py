@@ -1,20 +1,26 @@
 from typing import Optional
+import sys
 
 
 class Log:
     def __init__(self, param: str, type: Optional[str] = None):
+
+        if type is not None and not isinstance(type, str):
+
+            raise ValueError("type parameter must be a string")
+        
         if type in [None, 'info']:
-            print('\n\033[34mℹ', param, '\033[0m')  # Blue color for info
+            sys.stdout.write('\n\033[34mℹ {}\033[0m'.format(param))  # Blue color for info
             ...
         elif type == 'warning':
-            print('\n\033[33m⚠', param, '\033[0m')  # Yellow color for warning
+            sys.stdout.write('\n\033[33m⚠ {}\033[0m'.format(param))  # Yellow color for warning
             ...
         elif type == 'error':
-            exit('\n\033[31m❌', param, '\033[0m')  # Red color for error
+            sys.stdout.write('\n\033[31m❌ {}\033[0m'.format(param))  # Red color for error
             ...
         elif type == 'success':
-            print('\n\033[32m✓', param, '\033[0m')  # Green color for success
+            sys.stdout.write('\n\033[32m✓ {}\033[0m'.format(param))  # Green color for success
             ...
         else:
-            exit("invalid log type: [ {} ]".format(type))
+            sys.stdout.write("invalid log type: [ {} ]".format(type))
             ...

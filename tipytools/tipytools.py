@@ -52,7 +52,7 @@ class Tipytools:
 
         Args:
             env (str): The name of the virtual environment.
-        
+
         Usage:
             tipy init <env>
 
@@ -88,7 +88,7 @@ class Tipytools:
 
         Usage:
             tipy maketool <tool_name>
-            
+
         Examples:
             To generate the folder structure for a tool named "mytool", run:
             $ tipy maketool mytool
@@ -118,6 +118,7 @@ class Tipytools:
                 else:
                     with open(key, "w", encoding="utf-8") as new_file:
                         new_file.write(value)
+
 
 def main():
     fire.Fire(Tipytools)
