@@ -19,6 +19,8 @@ class Tipytools:
             tool_name (str): The name of the tool.
             env (str, optional): The name of the virtual environment. If not provided,
                 a default environment name will be derived from the tool name.
+        Usage:
+            tipy setup <env> <tool>
 
         Examples:
             To set up a project for a tool named "mytool" with a virtual environment named "myenv", run:
@@ -50,6 +52,9 @@ class Tipytools:
 
         Args:
             env (str): The name of the virtual environment.
+        
+        Usage:
+            tipy init <env>
 
         Examples:
             To initialize the project with a virtual environment named "myenv", run:
@@ -81,6 +86,9 @@ class Tipytools:
         Args:
             tool_name (str): The name of the tool.
 
+        Usage:
+            tipy maketool <tool_name>
+            
         Examples:
             To generate the folder structure for a tool named "mytool", run:
             $ tipy maketool mytool
@@ -110,13 +118,6 @@ class Tipytools:
                 else:
                     with open(key, "w", encoding="utf-8") as new_file:
                         new_file.write(value)
-                        # if new_file.name == "README.md":
-                        #     new_file.write(content)
-                        # elif new_file.name == "setup":
-                        #     new_file.write(content)
-                        # elif new_file.name == "pyproject.toml":
-                        #     new_file.write(content)
-
 
 def main():
     fire.Fire(Tipytools)
