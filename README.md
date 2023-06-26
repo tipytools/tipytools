@@ -1,3 +1,5 @@
+![](tipy.png)
+
 # Tipytools
 
  Tipytools is a Python library that simplifies the development of command-line tools by providing a collection of command-line tool templates and utilities. It offers features such as project setup, template-based file generation, logging, and integration with the fire library for creating user-friendly command-line interfaces.
