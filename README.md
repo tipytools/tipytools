@@ -31,6 +31,10 @@ Tipytools/
 
 ## Installation:
 
+```shell
+pip install tipytool
+```
+
 You can install Tipytools directly from the GitHub repository:
 
 ```shell
