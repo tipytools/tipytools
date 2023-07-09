@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tptools"
+name = "tipytool"
 authors = [{ name = "Mauly dotDev", email = "mauly.dev@gmail.com" }]
 description = "A tool for generating boilerplate for creating command-line tools"
 readme = "README.md"
