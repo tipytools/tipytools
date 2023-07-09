@@ -4,6 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tipytool"
+version = 1.0.0
 authors = [{ name = "Mauly dotDev", email = "mauly.dev@gmail.com" }]
 description = "A tool for generating boilerplate for creating command-line tools"
 readme = "README.md"
